@@ -1,0 +1,222 @@
+:root {
+  --font-body: "Rubik", sans-serif;
+  --font-code: "IBM Plex Mono", monospace;
+  --font-heading: "IBM Plex Mono", monospace;
+
+  --color-base-brand: 13, 88%;
+  --color-base-white: 0, 0%;
+  --color-base-black: 240, 28%;
+  --color-base-blue: 198, 39%;
+  --color-base-red: 2, 84%;
+}
+
+:root {
+  --color-fade-duration: 0.20s;
+
+  --spacing: 1rem;
+  --border-radius: 4px;
+
+  --text-bold-weight: 600;
+
+  --sidebar-width: 15rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-brand: var(--color-base-brand), 60%;
+    --color-white: var(--color-base-white), 100%;
+    --color-black: var(--color-base-black), 14%;
+    --color-blue: var(--color-base-blue), 51%;
+    --color-red: var(--color-base-red), 55%;
+
+    --color-brand-d4: var(--color-base-brand), 36%;
+    --color-brand-d3: var(--color-base-brand), 42%;
+    --color-brand-d2: var(--color-base-brand), 48%;
+    --color-brand-d1: var(--color-base-brand), 54%;
+    --color-brand-l1: var(--color-base-brand), 66%;
+    --color-brand-l2: var(--color-base-brand), 72%;
+
+    --color-black-d1: var(--color-base-black), 10%;
+
+    --color-red-d4: var(--color-base-red), 31%;
+    --color-red-d3: var(--color-base-red), 37%;
+    --color-red-d2: var(--color-base-red), 43%;
+    --color-red-d1: var(--color-base-red), 49%;
+    --color-red-l1: var(--color-base-red), 61%;
+    --color-red-l2: var(--color-base-red), 67%;
+  }
+
+  :root {
+    --background: hsla(var(--color-white), 100%);
+    --background-hover: hsla(var(--color-black), 4%);
+    --background-surface: hsla(var(--color-black), 5%);
+
+    --accent: hsla(var(--color-brand), 100%);
+
+    --divider: hsla(var(--color-black), 8%);
+    --divider-on-surface: hsla(var(--color-black), 10%);
+
+    --text-primary: hsla(var(--color-black), 93%);
+    --text-secondary: hsla(var(--color-black), 60%);
+    --text-dimmed: hsla(var(--color-black), 38%);
+
+    --text-primary-on-surface: hsla(var(--color-black), 78%);
+    --text-primary-on-accent: hsla(var(--color-white), 93%);
+    --text-primary-on-danger: hsla(var(--color-white), 93%);
+
+    --link-primary: hsla(var(--color-blue), 100%);
+
+    --button-primary-background: var(--accent);
+    --button-primary-hover: hsla(var(--color-brand-l1), 100%);
+    --button-primary-active: hsla(var(--color-brand-d1), 100%);
+    --button-primary-disabled-opacity: 0.65;
+    --button-primary-border: hsla(var(--color-brand-d2), 100%);
+    --button-primary-border-hover: hsla(var(--color-brand-d1), 100%);
+
+    --button-secondary-background: var(--background-surface);
+    --button-secondary-hover: hsla(var(--color-black), 3%);
+    --button-secondary-active: hsla(var(--color-black), 8%);
+    --button-secondary-disabled-opacity: 0.6;
+    --button-secondary-border: hsla(var(--color-black), 5%);
+    --button-secondary-border-hover: hsla(var(--color-black), 7%);
+
+    --button-danger-background: hsla(var(--color-red), 100%);
+    --button-danger-hover: hsla(var(--color-red-l1), 100%);
+    --button-danger-active: hsla(var(--color-red-d1), 100%);
+    --button-danger-disabled-opacity: 0.65;
+    --button-danger-border: hsla(var(--color-red-d2), 100%);
+    --button-danger-border-hover: hsla(var(--color-red-d1), 100%);
+  }
+
+  :root {
+    --inset-shadow-on-surface: 0 1px 0 inset hsla(var(--color-white), 54%);
+    --inset-shadow-on-accent: 0 1px 0 inset hsla(var(--color-brand-l2), 80%);
+    --inset-shadow-on-danger: 0 1px 0 inset hsla(var(--color-red-l2), 80%);
+
+    --drop-shadow-2: 
+      0 1px 1px hsla(var(--color-black-d1), 0.03),
+      0 2px 2px hsla(var(--color-black-d1), 0.03)
+    ;
+    --drop-shadow-2-10:
+      0 1px 1px hsla(var(--color-black-d1), 0.1),
+      0 2px 2px hsla(var(--color-black-d1), 0.1)
+    ;
+    --drop-shadow-10: 
+      0 1px 1px hsla(var(--color-black-d1), 0.01),
+      0 2px 2px hsla(var(--color-black-d1), 0.01),
+      0 4px 4px hsla(var(--color-black-d1), 0.01),
+      0 8px 8px hsla(var(--color-black-d1), 0.01),
+      0 10px 10px hsla(var(--color-black-d1), 0.01)
+    ;
+
+    --drop-shadow-2-on-surface:
+      var(--inset-shadow-on-surface),
+      var(--drop-shadow-2)
+    ;
+    --drop-shadow-2-10-on-accent:
+      var(--inset-shadow-on-accent),
+      var(--drop-shadow-2-10)
+    ;
+    --drop-shadow-2-10-on-danger:
+      var(--inset-shadow-on-danger),
+      var(--drop-shadow-2-10)
+    ;
+
+    --card-shadow: none;
+    --button-shadow: var(--drop-shadow-2-on-surface);
+    --button-shadow-for-accent: var(--drop-shadow-2-10-on-accent);
+    --button-shadow-for-danger: var(--drop-shadow-2-10-on-danger);
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: var(--color-base-brand), 65%;
+    --color-white: var(--color-base-white), 100%;
+    --color-black: var(--color-base-black), 14%;
+    --color-blue: var(--color-base-blue), 61%;
+    --color-red: var(--color-base-red), 62%;
+
+    --color-brand-d4: var(--color-base-brand), 41%;
+    --color-brand-d3: var(--color-base-brand), 47%;
+    --color-brand-d2: var(--color-base-brand), 53%;
+    --color-brand-d1: var(--color-base-brand), 59%;
+    --color-brand-l1: var(--color-base-brand), 71%;
+    --color-brand-l2: var(--color-base-brand), 77%;
+
+    --color-black-d1: var(--color-base-black), 10%;
+
+    --color-red-d4: var(--color-base-red), 38%;
+    --color-red-d3: var(--color-base-red), 44%;
+    --color-red-d2: var(--color-base-red), 50%;
+    --color-red-d1: var(--color-base-red), 56%;
+    --color-red-l1: var(--color-base-red), 68%;
+    --color-red-l2: var(--color-base-red), 74%;
+  }
+
+  :root {
+    --background: hsla(var(--color-black), 100%);
+    --background-hover: hsla(var(--color-white), 4%);
+    --background-surface: hsla(var(--color-white), 5%);
+
+    --accent: hsla(var(--color-brand), 100%);
+
+    --divider: hsla(var(--color-white), 6%);
+    --divider-on-surface: hsla(var(--color-white), 8%);
+    --divider-on-surface: hsla(var(--color-white), 8%);
+
+    --text-primary: hsla(var(--color-white), 87%);
+    --text-secondary: hsla(var(--color-white), 60%);
+    --text-dimmed: hsla(var(--color-white), 38%);
+
+    --link-primary: hsla(var(--color-blue), 100%);
+
+    --text-primary-on-surface: hsla(var(--color-white), 80%);
+    --text-primary-on-accent: hsla(var(--color-white), 87%);
+    --text-primary-on-danger: hsla(var(--color-white), 87%);
+
+    --button-primary-background: var(--accent);
+    --button-primary-hover: hsla(var(--color-brand-l1), 100%);
+    --button-primary-active: hsla(var(--color-brand-d1), 100%);
+    --button-primary-disabled-opacity: 0.65;
+    --button-primary-border: hsla(var(--color-brand-d2), 100%);
+    --button-primary-border-hover: hsla(var(--color-brand), 100%);
+
+    --button-secondary-background: var(--background-surface);
+    --button-secondary-hover: hsla(var(--color-white), 9%);
+    --button-secondary-active: hsla(var(--color-white), 4%);
+    --button-secondary-disabled-opacity: 0.6;
+    --button-secondary-border: hsla(var(--color-white), 4%);
+    --button-secondary-border-hover: hsla(var(--color-white), 3%);
+
+    --button-danger-background: hsla(var(--color-red), 100%);
+    --button-danger-hover: hsla(var(--color-red-l1), 100%);
+    --button-danger-active: hsla(var(--color-red-d1), 100%);
+    --button-danger-disabled-opacity: 0.65;
+    --button-danger-border: hsla(var(--color-red-d2), 100%);
+    --button-danger-border-hover: hsla(var(--color-red), 100%);
+  }
+
+  :root {
+    --drop-shadow-2: 
+      0 1px 1px hsla(var(--color-black-d1), 0.4),
+      0 2px 2px hsla(var(--color-black-d1), 0.4)
+    ;
+    --drop-shadow-2-80: 
+      0 1px 1px hsla(var(--color-black-d1), 80%),
+      0 2px 2px hsla(var(--color-black-d1), 80%)
+    ;
+    --drop-shadow-10: 
+      0 1px 1px hsla(var(--color-black-d1), 0.075),
+      0 2px 2px hsla(var(--color-black-d1), 0.075),
+      0 4px 4px hsla(var(--color-black-d1), 0.075),
+      0 8px 8px hsla(var(--color-black-d1), 0.075),
+      0 10px 10px hsla(var(--color-black-d1), 0.075)
+    ;
+
+    --card-shadow: var(--drop-shadow-10);
+    --button-shadow: var(--drop-shadow-2);
+    --button-shadow-for-accent: var(--drop-shadow-2-80);
+  }
+}

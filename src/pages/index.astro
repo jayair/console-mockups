@@ -1,0 +1,66 @@
+---
+import sst from "../images/sst.png";
+import patrick from "../images/patrick.jpg";
+
+import "./normalize.css";
+import "./variables.css";
+import "./main.css";
+---
+
+<html lang="en">
+  <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+		<meta name="color-scheme" content="dark light">
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3F3F4" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262638" />
+  </head>
+  <body>
+    <div class="sidebar">
+			<div class="switcher">
+				<div class="person">
+					<img width="36px" src={ patrick } />
+					<span class="secondary">Patrick</span>
+				</div>
+				<img width="24px" src={ sst } />
+			</div>
+      <a class="active" href="/">Issues</a>
+      <a href="/">Resources</a>
+    </div>
+    <div class="content">
+      <div class="title">
+        <div>
+          <h1>Issues</h1>
+          <p class="dimmed">View and manage issues in real-time</p>
+        </div>
+				<div>
+					<button class="danger">Delete</button>
+					&nbsp;
+					<button class="primary">Enable</button>
+					&nbsp;
+					<button class="secondary">Settings</button>
+					&nbsp;
+					<button disabled class="secondary">Settings</button>
+					&nbsp;
+					<button disabled class="primary">Enable</button>
+					&nbsp;
+					<button disabled class="danger">Delete</button>
+				</div>
+      </div>
+      <div class="card">
+        <h4>Title</h4>
+        <p class="dimmed">Hello world!</p>
+				<hr />
+        <p class="secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="card">
+        <p class="primary">Lorem ipsum dolor sit amet, <a href="/asd">consectetur adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </body>
+</html>
