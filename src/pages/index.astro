@@ -1,10 +1,8 @@
 ---
-import sst from "../images/sst.png";
-import patrick from "../images/patrick.jpg";
-
 import "./normalize.css";
 import "./variables.css";
 import "./main.css";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
 <html lang="en">
@@ -21,17 +19,7 @@ import "./main.css";
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#262638" />
   </head>
   <body>
-    <div class="sidebar">
-			<div class="switcher">
-				<div class="person">
-					<img width="36px" src={ patrick } />
-					<span class="secondary">Patrick</span>
-				</div>
-				<img width="24px" src={ sst } />
-			</div>
-      <a class="active" href="/">Issues</a>
-      <a href="/">Resources</a>
-    </div>
+		<Sidebar />
     <div class="content">
       <div class="title">
         <div>

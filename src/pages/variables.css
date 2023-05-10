@@ -132,25 +132,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-brand: var(--color-base-brand), 65%;
+    --color-brand: var(--color-base-brand), 62%;
     --color-white: var(--color-base-white), 100%;
     --color-black: var(--color-base-black), 14%;
     --color-blue: var(--color-base-blue), 61%;
-    --color-red: var(--color-base-red), 62%;
+    --color-red: var(--color-base-red), 60%;
 
-    --color-brand-d4: var(--color-base-brand), 41%;
-    --color-brand-d3: var(--color-base-brand), 47%;
-    --color-brand-d2: var(--color-base-brand), 53%;
-    --color-brand-d1: var(--color-base-brand), 59%;
+    --color-brand-d4: var(--color-base-brand), 38%;
+    --color-brand-d3: var(--color-base-brand), 44%;
+    --color-brand-d2: var(--color-base-brand), 50%;
+    --color-brand-d1: var(--color-base-brand), 56%;
     --color-brand-l1: var(--color-base-brand), 71%;
     --color-brand-l2: var(--color-base-brand), 77%;
 
     --color-black-d1: var(--color-base-black), 10%;
 
-    --color-red-d4: var(--color-base-red), 38%;
-    --color-red-d3: var(--color-base-red), 44%;
-    --color-red-d2: var(--color-base-red), 50%;
-    --color-red-d1: var(--color-base-red), 56%;
+    --color-red-d4: var(--color-base-red), 36%;
+    --color-red-d3: var(--color-base-red), 42%;
+    --color-red-d2: var(--color-base-red), 48%;
+    --color-red-d1: var(--color-base-red), 54%;
     --color-red-l1: var(--color-base-red), 68%;
     --color-red-l2: var(--color-base-red), 74%;
   }
