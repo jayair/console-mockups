@@ -19,6 +19,9 @@
   --text-bold-weight: 600;
 
   --sidebar-width: 15rem;
+  --sidebar-padding: 0.625rem;
+
+  --icon-opacity: 0.9;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,6 +1,5 @@
 html {
   font-size: 16px;
-  line-height: 1.625;
   font-weight: 400;
 }
 
@@ -8,6 +7,7 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   background: var(--background);
+  line-height: 1.625;
 
   font-synthesis: none;
   text-rendering: geometricPrecision;
@@ -42,62 +42,6 @@ a {
 a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: var(--sidebar-width);
-  overflow-y: auto;
-  border-right: 1px solid var(--divider);
-  box-sizing: border-box;
-}
-
-.switcher {
-  padding: var(--spacing);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.switcher .person {
-  display: flex;
-  align-items: center;
-}
-
-.switcher .person img {
-  margin-right: calc(var(--spacing) / 3);
-  border-radius: var(--border-radius);
-}
-.switcher .person span {
-  font-size: 0.875rem;
-}
-
-.switcher > img {
-  flex: 0;
-  border-radius: var(--border-radius);
-}
-
-.sidebar a {
-  display: block;
-  padding: var(--spacing);
-  margin-bottom: calc(var(--spacing) / 2);
-  color: var(--text-secondary);
-  font-family: var(--font-heading);
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 0.8125rem;
-  letter-spacing: 1px;
-}
-.sidebar a:hover {
-  text-decoration: none;
-}
-
-.sidebar a.active {
-  background-color: var(--background-hover);
-  color: var(--text-primary);
 }
 
 .content {

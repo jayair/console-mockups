@@ -1,16 +1,127 @@
 ---
-import sst from "../images/sst.png";
 import patrick from "../images/patrick.jpg";
+import Switcher from "./Switcher.astro";
 ---
 
+<style>
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  overflow-y: auto;
+  border-right: 1px solid var(--divider);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .links a {
+  display: block;
+  padding: var(--spacing) var(--sidebar-padding);
+  margin-bottom: calc(var(--spacing) / 2);
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+  transition: color var(--color-fade-duration) ease-out;
+  display: flex;
+  align-items: center;
+}
+.sidebar .links a:hover {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.sidebar .links a.active {
+  background-color: var(--background-hover);
+  color: var(--text-primary);
+}
+
+.sidebar .links a span {
+  line-height: 1;
+}
+.sidebar .links a svg {
+  margin-right: 7px;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  opacity: var(--icon-opacity);
+}
+
+.tools {
+  padding: var(--sidebar-padding) 0 var(--sidebar-padding) var(--sidebar-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tools .user {
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 0.875rem;
+  opacity: 0.8;
+  transition: opacity var(--color-fade-duration) ease-out;
+}
+.tools .user:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.tools .user img {
+  margin-right: 4px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: var(--background-surface);
+}
+
+.tools .help {
+  padding: 4px var(--sidebar-padding);
+  transition: background-color var(--color-fade-duration) ease-out;
+  color: var(--color-black);
+  opacity: 0.4;
+  transition: opacity var(--color-fade-duration) ease-out;
+  cursor: pointer;
+}
+.tools .help svg {
+  display: block;
+}
+.tools .help:hover {
+  opacity: 0.7;
+}
+
+.tools > img {
+  flex: 0;
+  border-radius: var(--border-radius);
+}
+</style>
+
 <div class="sidebar">
-  <div class="switcher">
-    <div class="person">
-      <img width="36px" src={ patrick } />
-      <span class="secondary">Patrick</span>
+  <div>
+    <Switcher />
+    <div class="links">
+      <a class="active" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>Issues</span>
+      </a>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+        <span>Resources</span>
+      </a>
     </div>
-    <img width="24px" src={ sst } />
   </div>
-  <a class="active" href="/">Issues</a>
-  <a href="/">Resources</a>
+  <div class="tools">
+    <a class="user">
+      <img width="28px" src={ patrick } />
+      <span>Patrick</span>
+    </a>
+    <a class="help">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+    </a>
+  </div>
 </div>

@@ -1,0 +1,98 @@
+---
+import sst from "../images/sst.png";
+---
+<style>
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--sidebar-padding) 0 var(--sidebar-padding) var(--sidebar-padding);
+}
+.app > button {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  padding: 4px;
+  border: 1px solid var(--button-secondary-border);
+  border-radius: 8px;
+  background-color: var(--button-secondary-background);
+  transition:
+    background-color var(--color-fade-duration) ease-out,
+    border var(--color-fade-duration) ease-out
+  ;
+}
+.app > button:hover {
+  background-color: var(--button-secondary-hover);
+  border-color: var(--button-secondary-border-hover);
+}
+.app > button:active {
+  background-color: var(--button-secondary-active);
+}
+.app > button img {
+  display: block;
+  border-radius: var(--border-radius);
+}
+.app .switcher {
+  flex: 1 1 auto;
+  padding: 0 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app .switcher:hover {
+  cursor: pointer;
+}
+.app .breadcrumb {
+  line-height: 1;
+}
+.app .breadcrumb p {
+  font: var(--font-heading);
+  color: var(--text-secondary);
+  line-height: 1;
+}
+.app .breadcrumb p:first-child {
+  font-weight: 500;
+}
+.app .breadcrumb p:last-child {
+  margin-top: 5px;
+  font-size: 0.875rem;
+  color: var(--text-dimmed);
+}
+.app .switcher svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: var(--color-black);
+  opacity: 0.4;
+  transition: opacity var(--color-fade-duration) ease-out;
+}
+.app .switcher:hover svg {
+  opacity: 0.7;
+}
+.app .switcher > span {
+  padding: 5px 0;
+  border-radius: 10px;
+  transition: background-color var(--color-fade-duration) ease-out;
+}
+.app .switcher:hover > span {
+  background-color: var(--button-secondary-hover);
+}
+.app .switcher:active > span {
+  background-color: var(--button-secondary-active);
+}
+</style>
+<div class="app">
+  <button>
+    <img width="32px" src={ sst } />
+  </button>
+  <div class="switcher">
+    <div class="breadcrumb">
+      <p>prod</p>
+      <p>my-sst-app</p>
+    </div>
+    <span>
+      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd"></path>
+      </svg>
+    </span>
+  </div>
+</div>
