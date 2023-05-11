@@ -6,14 +6,13 @@ import sst from "../images/sst.png";
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: var(--sidebar-padding) 0 var(--sidebar-padding) var(--sidebar-padding);
 }
 .app > button {
   flex: 0 0 auto;
   margin-right: 8px;
-  padding: 4px;
-  border: 1px solid var(--button-secondary-border);
-  border-radius: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
   background-color: var(--button-secondary-background);
   transition:
     background-color var(--color-fade-duration) ease-out,
@@ -33,7 +32,6 @@ import sst from "../images/sst.png";
 }
 .app .switcher {
   flex: 1 1 auto;
-  padding: 0 5px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,6 +40,7 @@ import sst from "../images/sst.png";
   cursor: pointer;
 }
 .app .breadcrumb {
+  margin-right: 7px;
   line-height: 1;
 }
 .app .breadcrumb p {
@@ -86,8 +85,8 @@ import sst from "../images/sst.png";
   </button>
   <div class="switcher">
     <div class="breadcrumb">
-      <p>prod</p>
       <p>my-sst-app</p>
+      <p>prod</p>
     </div>
     <span>
       <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

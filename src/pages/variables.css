@@ -18,8 +18,8 @@
 
   --text-bold-weight: 600;
 
-  --sidebar-width: 15rem;
-  --sidebar-padding: 0.625rem;
+  --navbar-padding: 0.75rem;
+  --content-padding: var(--navbar-padding);
 
   --icon-opacity: 0.9;
 }

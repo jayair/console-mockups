@@ -1,0 +1,44 @@
+---
+import patrick from "../images/patrick.jpg";
+import Switcher from "./Switcher.astro";
+---
+<style>
+nav {
+  top: 0;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
+  border-bottom: 1px solid var(--divider);
+  padding: var(--navbar-padding);
+}
+.user {
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 0.875rem;
+  opacity: 0.8;
+  transition: opacity var(--color-fade-duration) ease-out;
+}
+.user:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.user img {
+  margin-right: 3px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: var(--background-surface);
+}
+</style>
+<nav>
+  <Switcher />
+  <a class="user">
+    <img width="28px" src={ patrick } />
+  </a>
+</nav>

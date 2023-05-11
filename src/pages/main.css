@@ -45,9 +45,7 @@ a:hover {
 }
 
 .content {
-  margin-left: var(--sidebar-width);
-  padding: var(--spacing);
-  box-sizing: border-box;
+  padding: var(--content-padding);
 }
 
 .title {
