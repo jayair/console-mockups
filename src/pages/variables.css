@@ -21,7 +21,10 @@
   --navbar-padding: 0.75rem;
   --content-padding: var(--navbar-padding);
 
-  --icon-opacity: 0.9;
+  --sidebar-width: 15rem;
+  --sidebar-padding: var(--navbar-padding);
+
+  --icon-opacity: 0.85;
 }
 
 @media (prefers-color-scheme: light) {

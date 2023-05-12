@@ -1,39 +1,31 @@
----
-import patrick from "../images/patrick.jpg";
-import Switcher from "./Switcher.astro";
----
-
 <style>
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  margin: var(--sidebar-padding) 0;
+  flex: 0 0 auto;
   width: var(--sidebar-width);
-  overflow-y: auto;
-  border-right: 1px solid var(--divider);
+  padding: 0 var(--sidebar-padding);
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .sidebar .links {
-  padding-top: var(--sidebar-padding);
 }
 
 .sidebar .links a {
   display: block;
-  padding: var(--spacing) var(--sidebar-padding);
+  padding: calc(var(--sidebar-padding) / 2) 0;
   color: var(--text-secondary);
-  font-family: var(--font-heading);
-  font-weight: 500;
-  text-transform: uppercase;
   font-size: 0.875rem;
-  letter-spacing: 1px;
   transition: color var(--color-fade-duration) ease-out;
   display: flex;
   align-items: center;
+}
+.sidebar .links a.static {
+  padding: var(--sidebar-padding) 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .sidebar .links a:hover {
   text-decoration: none;
@@ -49,10 +41,10 @@ import Switcher from "./Switcher.astro";
   line-height: 1;
 }
 .sidebar .links a svg {
-  margin: 0 9px 0 6px;
+  margin: 0 6px 0 0;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   opacity: var(--icon-opacity);
 }
 
@@ -107,26 +99,27 @@ import Switcher from "./Switcher.astro";
 </style>
 
 <div class="sidebar">
-  <div>
-    <Switcher />
-    <div class="links">
-      <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M13 8V4q0-.425.288-.713T14 3h6q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9h-6q-.425 0-.713-.288T13 8ZM3 12V4q0-.425.288-.713T4 3h6q.425 0 .713.288T11 4v8q0 .425-.288.713T10 13H4q-.425 0-.713-.288T3 12Zm10 8v-8q0-.425.288-.713T14 11h6q.425 0 .713.288T21 12v8q0 .425-.288.713T20 21h-6q-.425 0-.713-.288T13 20ZM3 20v-4q0-.425.288-.713T4 15h6q.425 0 .713.288T11 16v4q0 .425-.288.713T10 21H4q-.425 0-.713-.288T3 20Zm2-9h4V5H5v6Zm10 8h4v-6h-4v6Zm0-12h4V5h-4v2ZM5 19h4v-2H5v2Zm4-8Zm6-4Zm0 6Zm-6 4Z"/></svg>
-        <span>Resources</span>
-      </a>
-      <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M8 17q.425 0 .713-.288T9 16q0-.425-.288-.713T8 15q-.425 0-.713.288T7 16q0 .425.288.713T8 17Zm0-4q.425 0 .713-.288T9 12q0-.425-.288-.713T8 11q-.425 0-.713.288T7 12q0 .425.288.713T8 13Zm0-4q.425 0 .713-.288T9 8q0-.425-.288-.713T8 7q-.425 0-.713.288T7 8q0 .425.288.713T8 9Zm4 8h4q.425 0 .713-.288T17 16q0-.425-.288-.713T16 15h-4q-.425 0-.713.288T11 16q0 .425.288.713T12 17Zm0-4h4q.425 0 .713-.288T17 12q0-.425-.288-.713T16 11h-4q-.425 0-.713.288T11 12q0 .425.288.713T12 13Zm0-4h4q.425 0 .713-.288T17 8q0-.425-.288-.713T16 7h-4q-.425 0-.713.288T11 8q0 .425.288.713T12 9ZM5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.588 1.413T19 21H5Zm0-2h14V5H5v14ZM5 5v14V5Z"/></svg>
-        <span>Issues</span>
-      </a>
-    </div>
-  </div>
-  <div class="tools">
-    <a class="user">
-      <img width="28px" src={ patrick } />
-      <span>Patrick</span>
+  <div class="links">
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><g clip-path="url(#akarIconsNextjsFill0)"><path fill="currentColor" d="M11.214.006c-.052.005-.216.022-.364.033c-3.408.308-6.6 2.147-8.624 4.974a11.88 11.88 0 0 0-2.118 5.243c-.096.66-.108.854-.108 1.748s.012 1.089.108 1.748c.652 4.507 3.86 8.293 8.209 9.696c.779.251 1.6.422 2.533.526c.364.04 1.936.04 2.3 0c1.611-.179 2.977-.578 4.323-1.265c.207-.105.247-.134.219-.157a211.64 211.64 0 0 1-1.955-2.62l-1.919-2.593l-2.404-3.559a342.499 342.499 0 0 0-2.422-3.556c-.009-.003-.018 1.578-.023 3.51c-.007 3.38-.01 3.516-.052 3.596a.426.426 0 0 1-.206.213c-.075.038-.14.045-.495.045H7.81l-.108-.068a.44.44 0 0 1-.157-.172l-.05-.105l.005-4.704l.007-4.706l.073-.092a.644.644 0 0 1 .174-.143c.096-.047.133-.051.54-.051c.478 0 .558.018.682.154c.035.038 1.337 2 2.895 4.362l4.734 7.172l1.9 2.878l.097-.063a12.318 12.318 0 0 0 2.465-2.163a11.947 11.947 0 0 0 2.825-6.135c.096-.66.108-.854.108-1.748s-.012-1.088-.108-1.748C23.24 5.75 20.032 1.963 15.683.56a12.6 12.6 0 0 0-2.498-.523c-.226-.024-1.776-.05-1.97-.03Zm4.913 7.26a.473.473 0 0 1 .237.276c.018.06.023 1.365.018 4.305l-.007 4.218l-.743-1.14l-.746-1.14v-3.066c0-1.983.009-3.097.023-3.151a.478.478 0 0 1 .232-.296c.097-.05.132-.054.5-.054c.347 0 .408.005.486.047Z"/></g><defs><clipPath id="akarIconsNextjsFill0"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></g></svg>
+      <span>site</span>
     </a>
-    <a class="help">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm-2.9-2.55l1.2-2.75q-1.05-.375-1.813-1.162T7.3 13.7l-2.75 1.15q.575 1.6 1.775 2.8t2.775 1.8ZM7.3 10.3q.425-1.05 1.188-1.837T10.3 7.3L9.15 4.55q-1.6.6-2.8 1.8t-1.8 2.8L7.3 10.3ZM12 15q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Zm2.9 4.45q1.575-.6 2.763-1.787T19.45 14.9l-2.75-1.2q-.375 1.05-1.15 1.813t-1.8 1.187l1.15 2.75Zm1.8-9.2l2.75-1.15q-.6-1.575-1.788-2.762T14.9 4.55l-1.15 2.8q1.025.375 1.775 1.137T16.7 10.25Z"/></svg>
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 13h5m3 3V8h3a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-3m8-5v8M9 16v-5.5a2.5 2.5 0 0 0-5 0V16"/></svg>
+      <span>auth-api</span>
+    </a>
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21q-1.875 0-3.513-.713t-2.85-1.924q-1.212-1.213-1.924-2.85T3 12q0-1.875.713-3.513t1.924-2.85q1.213-1.212 2.85-1.924T12 3q2.05 0 3.888.875T19 6.35V5q0-.425.288-.713T20 4q.425 0 .713.288T21 5v4q0 .425-.288.713T20 10h-4q-.425 0-.713-.288T15 9q0-.425.288-.713T16 8h1.75q-1.025-1.4-2.525-2.2T12 5Q9.075 5 7.037 7.038T5 12q0 2.925 2.038 4.963T12 19q2.375 0 4.25-1.425t2.475-3.675q.125-.4.45-.6t.725-.15q.425.05.675.362t.15.688q-.725 2.975-3.15 4.888T12 21Zm1-9.4l2.5 2.5q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-2.8-2.8q-.15-.15-.225-.337T11 11.975V8q0-.425.288-.713T12 7q.425 0 .713.288T13 8v3.6Z"/></svg>
+      <span>cron</span>
+    </a>
+    <a href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="currentColor" d="m31.42 9.09l-13-6a1 1 0 0 0-.84 0l-13 6A1 1 0 0 0 4 10v17a1 1 0 0 0 .58.91l13 6a1 1 0 0 0 .84 0l13-6A1 1 0 0 0 32 27V10a1 1 0 0 0-.58-.91ZM18 14.9L7.39 10L18 5.1L28.61 10Zm12 11.46l-11 5.08v-14.8l11-5.08Z" class="clr-i-solid clr-i-solid-path-1"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+      <span>other</span>
+    </a>
+    <hr />
+    <a class="static" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M13 17q-.425 0-.713-.288T12 16q0-.425.288-.713T13 15h4q.425 0 .713.288T18 16q0 .425-.288.713T17 17h-4Zm-6.2-.7q-.275-.275-.275-.7t.275-.7L8.675 13l-1.9-1.9q-.3-.3-.288-.7t.313-.7q.3-.275.7-.287t.7.287l2.6 2.6q.15.15.213.325t.062.375q0 .2-.062.375t-.213.325l-2.6 2.6q-.275.275-.687.288T6.8 16.3ZM4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm0-2h16V8H4v10Z"/></svg>
+      <span>Outputs</span>
     </a>
   </div>
 </div>

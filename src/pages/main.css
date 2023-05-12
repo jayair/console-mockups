@@ -48,12 +48,14 @@ a:hover {
   padding: var(--content-padding);
 }
 
+/**
 .title {
   margin-bottom: var(--spacing);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+**/
 
 
 .card {
@@ -63,9 +65,112 @@ a:hover {
   background-color: var(--background-surface);
   box-shadow: var(--card-shadow);
 }
+.card .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: calc(var(--spacing) - 2px);
+  border-bottom: 1px solid var(--divider-on-surface);
+}
+.card h1 {
+  font-size: 1rem;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+.card h1 svg {
+  margin-right: 5px;
+  padding: 1px 0;
+  width: 16px;
+  height: 16px;
+  opacity: var(--icon-opacity);
+}
+.card h1 span:last-child {
+  margin-left: 5px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.card h6 {
+  display: flex;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--text-secondary);
+}
+.card h6 span.separator {
+  margin: 0 6px;
+  color: var(--divider-on-surface);
+  font-weight: var(--text-bold-weight);
+}
 .card hr {
   background-color: var(--divider-on-surface);
 }
+
+.functions {
+  margin: calc(var(--spacing) - 12px) 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.functions li {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.functions li span {
+  font-family: var(--font-code);
+  font-size: 0.8125rem;
+  line-height: 1;
+}
+.functions li .left,
+.functions li .right {
+  display: flex;
+  align-items: center;
+}
+.functions .right span {
+  margin-left: calc(var(--spacing) / 1.5);
+}
+.functions li .name {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+.functions li .method {
+  margin-right: 10px;
+  width: 40px;
+  text-align: center;
+  color: var(--text-dimmed);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  border: 1px solid var(--divider-on-surface);
+  padding: 3px 4px;
+  line-height: 1.1;
+  border-radius: var(--border-radius);
+}
+.functions li .route {
+  font-family: var(--font-code);
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+}
+.functions li .size {
+  color: var(--text-secondary);
+}
+.functions li .runtime svg {
+  width: 14px;
+  height: 14px;
+  padding: 1px;
+  color: var(--text-secondary);
+  opacity: var(--icon-opacity);
+  vertical-align: middle;
+}
+.functions li .right .region {
+  color: var(--text-secondary);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
 
 p.primary, span.primary {
   color: var(--text-primary);
