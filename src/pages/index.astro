@@ -95,7 +95,7 @@ import Sidebar from "../components/Sidebar.astro";
           </li>
           <li>
             <div class="left">
-              <span class="method">POST</span>
+              <span class="method">OPTIONS</span>
               <a is:raw class="route">/notes/${id}</a>
             </div>
             <div class="right">
@@ -108,6 +108,54 @@ import Sidebar from "../components/Sidebar.astro";
               <span class="region">
                 us-east-1
               </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="card outputs">
+        <div class="title">
+          <h1>
+            <span>Outputs</span>
+          </h1>
+        </div>
+        <ul class="outputs">
+          <li>
+            <div class="left">
+              <span class="name">ApiEndpoint</span>
+            </div>
+            <div class="right">
+              <span class="value">
+                https://mwismf5e9l.execute-api.us-east-1.amazonaws.com/prod
+              </span>
+              <a class="copy" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="left">
+              <span class="name">ServerlessDeploymentBucketName</span>
+            </div>
+            <div class="right">
+              <span class="value">
+                mono-repo-sls-groups-pro-serverlessdeploymentbuck-1kmkojwrhblsj
+              </span>
+              <a class="copy" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="left">
+              <span class="name">HelloLambdaFunctionQualifiedArn</span>
+            </div>
+            <div class="right">
+              <span class="value">
+                arn:aws:lambda:us-east-1:087220554750:function:mono-repo-sls-groups-prod-hello:3
+              </span>
+              <a class="copy" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.588T3 20V7q0-.425.288-.713T4 6q.425 0 .713.288T5 7v13h10q.425 0 .713.288T16 21q0 .425-.288.713T15 22H5Zm4-4q-.825 0-1.413-.588T7 16V4q0-.825.588-1.413T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.588 1.413T18 18H9Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+              </a>
             </div>
           </li>
         </ul>

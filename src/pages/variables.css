@@ -55,12 +55,12 @@
   :root {
     --background: hsla(var(--color-white), 100%);
     --background-hover: hsla(var(--color-black), 4%);
-    --background-surface: hsla(var(--color-black), 5%);
+    --background-surface: hsla(var(--color-black), 3%);
 
     --accent: hsla(var(--color-brand), 100%);
 
     --divider: hsla(var(--color-black), 8%);
-    --divider-on-surface: hsla(var(--color-black), 10%);
+    --divider-on-surface: hsla(var(--color-black), 6%);
 
     --text-primary: hsla(var(--color-black), 93%);
     --text-secondary: hsla(var(--color-black), 60%);
@@ -128,7 +128,6 @@
       var(--drop-shadow-2-10)
     ;
 
-    --card-shadow: none;
     --button-shadow: var(--drop-shadow-2-on-surface);
     --button-shadow-for-accent: var(--drop-shadow-2-10-on-accent);
     --button-shadow-for-danger: var(--drop-shadow-2-10-on-danger);
@@ -221,7 +220,6 @@
       0 10px 10px hsla(var(--color-black-d1), 0.075)
     ;
 
-    --card-shadow: var(--drop-shadow-10);
     --button-shadow: var(--drop-shadow-2);
     --button-shadow-for-accent: var(--drop-shadow-2-80);
   }

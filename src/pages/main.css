@@ -60,36 +60,41 @@ a:hover {
 
 .card {
   margin-bottom: var(--spacing);
-  padding: var(--spacing);
   border-radius: var(--border-radius);
   background-color: var(--background-surface);
-  box-shadow: var(--card-shadow);
+}
+.card.outputs {
+  background-color: transparent;
+  border: 1px solid var(--divider);
 }
 .card .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: calc(var(--spacing) - 2px);
+  padding: calc(var(--spacing) - 2px) calc(var(--spacing) + 4px);
   border-bottom: 1px solid var(--divider-on-surface);
 }
 .card h1 {
   font-size: 1rem;
   text-transform: none;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   font-weight: 500;
   font-family: var(--font-body);
+  font-size: 0.875rem;
 }
 .card h1 svg {
   margin-right: 5px;
   padding: 1px 0;
   width: 16px;
   height: 16px;
+  align-self: center;
   opacity: var(--icon-opacity);
 }
-.card h1 span:last-child {
-  margin-left: 5px;
+.card h1 span:nth-child(3) {
+  margin-left: 8px;
   font-weight: 400;
+  font-size: 0.8125rem;
   color: var(--text-secondary);
 }
 .card h6 {
@@ -108,24 +113,36 @@ a:hover {
   background-color: var(--divider-on-surface);
 }
 
-.functions {
-  margin: calc(var(--spacing) - 12px) 0 0;
+.functions,
+.outputs {
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
-.functions li {
-  padding-top: 8px;
+.functions li,
+.outputs li {
+  margin: 0 calc(var(--spacing) + 4px);
+  padding: 13px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--divider-on-surface);
+}
+.functions li:last-child,
+.outputs li:last-child {
+  border: none;
 }
 .functions li span {
   font-family: var(--font-code);
   font-size: 0.8125rem;
   line-height: 1;
 }
-.functions li .left,
-.functions li .right {
+.functions li .left {
+  display: flex;
+  align-items: center;
+}
+.functions li .right,
+.outputs li .right {
   display: flex;
   align-items: center;
 }
@@ -133,42 +150,66 @@ a:hover {
   margin-left: calc(var(--spacing) / 1.5);
 }
 .functions li .name {
-  font-family: var(--font-heading);
+  margin-right: 15px;
   font-size: 0.875rem;
-  color: var(--text-primary);
+}
+.outputs li .name {
+  font-size: 0.875rem;
 }
 .functions li .method {
-  margin-right: 10px;
-  width: 40px;
+  margin: 0 10px 0 0;
+  width: 48px;
   text-align: center;
-  color: var(--text-dimmed);
-  font-size: 0.625rem;
+  color: var(--text-secondary);
+  font-size: 0.5625rem;
+  font-weight: 500;
   text-transform: uppercase;
-  border: 1px solid var(--divider-on-surface);
-  padding: 3px 4px;
+  border: 1px solid var(--divider);
+  padding: 4px 4px;
   line-height: 1.1;
   border-radius: var(--border-radius);
 }
 .functions li .route {
   font-family: var(--font-code);
-  font-size: 0.8125rem;
-  color: var(--text-primary);
+  font-size: 0.875rem;
 }
 .functions li .size {
   color: var(--text-secondary);
 }
 .functions li .runtime svg {
-  width: 14px;
-  height: 14px;
-  padding: 1px;
-  color: var(--text-secondary);
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  color: var(--text-dimmed);
   opacity: var(--icon-opacity);
   vertical-align: middle;
 }
 .functions li .right .region {
-  color: var(--text-secondary);
+  margin-left: 7px;
+  color: var(--text-dimmed);
   font-size: 0.625rem;
   text-transform: uppercase;
+}
+.outputs li .value {
+  color: var(--text-secondary);
+  font-family: var(--font-code);
+  font-size: 0.8125rem;
+}
+.outputs li .copy {
+  margin-left: 10px;
+  color: var(--text-dimmed);
+  opacity: var(--icon-opacity);
+  transition:
+    color var(--color-fade-duration) ease-out
+  ;
+}
+.outputs li .copy:hover {
+  color: var(--text-secondary);
+}
+.outputs li .copy svg {
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 

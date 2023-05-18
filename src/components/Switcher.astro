@@ -9,22 +9,16 @@ import sst from "../images/sst.png";
 }
 .app > button {
   flex: 0 0 auto;
-  margin-right: 8px;
-  padding: 0;
+  padding: 0 var(--navbar-padding) 0 0;
   border: 0;
   border-radius: 4px;
-  background-color: var(--button-secondary-background);
+  background-color: transparent
   transition:
-    background-color var(--color-fade-duration) ease-out,
     border var(--color-fade-duration) ease-out
   ;
 }
 .app > button:hover {
-  background-color: var(--button-secondary-hover);
   border-color: var(--button-secondary-border-hover);
-}
-.app > button:active {
-  background-color: var(--button-secondary-active);
 }
 .app > button img {
   display: block;
@@ -35,6 +29,8 @@ import sst from "../images/sst.png";
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 0 0 var(--navbar-padding);
+  border-left: 1px solid var(--divider);
 }
 .app .switcher:hover {
   cursor: pointer;
